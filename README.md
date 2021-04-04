@@ -1,4 +1,16 @@
+
+
 # GifsApp
+
+App Buscador de Gifs 
+Parte del curso de Angular con  [Fernando Herrera](https://fernando-herrera.com/) en UDEMY.  
+
+Marzo 2021.
+
+
+## Alumno
+Orlando Chaparro R. 
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.4.
 
