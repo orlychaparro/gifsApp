@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { GifsService } from '../services/gifs.service';
 
 @Component({
   selector: 'app-busqueda',
@@ -6,11 +7,24 @@ import { Component, OnInit } from '@angular/core';
   styles: [
   ]
 })
-export class BusquedaComponent implements OnInit {
+export class BusquedaComponent  {
 
-  constructor() { }
+  @ViewChild('txtBuscar') txtBusacar!:ElementRef<HTMLInputElement>; // el ! indica es Nonnull assertion operator 
+                                                  // como la variable no se inicializa y js dice
+                                                  // que podria ser null, damos !.
+  
+    constructor(private GifsService: GifsService){
 
-  ngOnInit(): void {
+    }
+
+    buscar( ) {
+    
+    const valor = this.txtBusacar.nativeElement.value;
+    
+    this.GifsService.buscarGifs(valor);
+
+    this.txtBusacar.nativeElement.value = '';
   }
+ 
 
 }
