@@ -8,7 +8,7 @@
       <div *ngFor="let valor of historial ">
       <a href="#"
        class="list-group-item list-group-item-acction" >
-        {{valor}}
+        {{historial.indexOf(valor) + 1 |number}})   {{valor | titlecase}}
       </a>
     </div>
     </div>
