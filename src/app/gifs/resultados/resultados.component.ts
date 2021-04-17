@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { GifsService } from '../services/gifs.service';
+import { Gif } from '../interface/gifs.interface';
 
 @Component({
   selector: 'app-resultados',
@@ -10,9 +11,15 @@ import { GifsService } from '../services/gifs.service';
 export class ResultadosComponent  {
 
   get resultados(){
+    
     return this.GifsService.resultados;
   }
 
-  constructor(private GifsService: GifsService){ }
+  
 
+
+  constructor(private GifsService: GifsService){ 
+   
+  }
+  
 }

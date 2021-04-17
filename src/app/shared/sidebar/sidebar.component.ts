@@ -24,8 +24,13 @@ export class SidebarComponent  {
     //this.valores =  ['aaa','bbb','ccc'];
    // this.valores =  GifsService.historial;
     //console.log(GifsService.historial);
+    //localStorage.getItem(this.historial.entries());
+
    }
 
- 
+   buscar(termino:string){
+     console.log(termino)
+     this.GifsService.buscarGifs(termino);
+   }
 
 }
